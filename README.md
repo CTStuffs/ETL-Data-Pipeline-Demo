@@ -1,10 +1,65 @@
-# ETL-Data-Pipeline-Demo
-This project entails building an ETL pipeline using a publicly available dataset, such as weather or transportation data. You will extract the data from a raw CSV file, clean and transform it using Python, and load the transformed data into Google BigQuery.
+# ETL Data Pipeline Demo
 
-To make this project truly modern, try using Polars for your transformations instead of the traditional Pandas library. Polars is significantly faster and becoming a favorite tool in the data engineering community. Additionally, before loading the data into the cloud, practice converting it into Parquet format. Parquet is a columnar storage format that is far more efficient than CSV and is the standard for big data storage.
+A Python-based ETL pipeline that extracts data from a raw CSV file, applies cleaning and transformation logic, and loads the result into Google BigQuery.
 
-This project is excellent for beginners as it introduces core ETL concepts—data extraction, transformation, and loading—while giving exposure to cloud tools like BigQuery and critical file formats.
+## Project Overview
 
-You'll also learn how to interact with cloud data warehouses, a core skill in modern data engineering, using simple tools like Python and the BigQuery API. For an introduction, review the beginner’s guide to BigQuery.
+- Extract: read raw CSV data from `data/raw/`.
+- Transform: clean, normalize, and validate rows in `src/transform.py`.
+- Load: append transformed results into a BigQuery table using `src/load.py`.
 
-As for the data, you can select an available dataset from either Kaggle or data.gov.
+## Architecture
+
+- `main.py` — pipeline orchestrator using environment variables.
+- `src/extract.py` — CSV ingestion logic.
+- `src/transform.py` — data validation, normalization, and type conversion.
+- `src/load.py` — BigQuery upload and dataset management.
+- `data/` — local dataset storage.
+- `notebooks/` — exploratory analysis.
+
+## Dependencies
+
+- Python 3.x
+- pandas
+- python-dotenv
+- google-cloud-bigquery
+- word2number
+
+## Quick Start
+
+1. Install dependencies:
+
+```bash
+pip install pandas python-dotenv google-cloud-bigquery word2number
+```
+
+2. Configure environment variables in `.env`:
+
+```text
+GC_PROJECT_ID=<your-gcp-project>
+GC_DATASET_ID=<bigquery-dataset>
+GC_TABLE_ID=<bigquery-table>
+DATA_PATH=data/raw/<your-file>.csv
+```
+
+3. Run the pipeline:
+
+```bash
+python main.py
+```
+
+## Notes
+
+- The current implementation uses `pandas` for transformation.
+- The pipeline is designed to support future improvements such as Parquet conversion, Polars-based transformation, and more advanced BigQuery schema handling.
+
+## Output
+
+- Cleaned dataset loaded into `project.dataset.table` in Google BigQuery.
+- Duplicate rows are removed, missing data is dropped, and numeric fields are normalized.
+
+## Recommended Next Steps
+
+- Replace `pandas` with `polars` for faster transformation.
+- Add Parquet export before load.
+- Add CLI flags and schema validation to improve production readiness.

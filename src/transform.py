@@ -76,3 +76,6 @@ def clean_data(df):
         "TRUE": True,
         "FALSE": False
     })
+
+def save_clean_data(df, file_path):
+    df.to_csv(file_path, index=False)
