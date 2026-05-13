@@ -1,3 +1,5 @@
+import sys
+
 import pandas as pd
 from word2number import w2n
 
@@ -15,6 +17,9 @@ def convert_words(x):
         return w2n.word_to_num(str(x))
     except:
         return x
+    
+
+
 
 
 def clean_data(df):
@@ -51,12 +56,14 @@ def clean_data(df):
     df = df[
         pd.to_numeric(df["price_per_night"], errors="coerce").notna()
     ]
-
+    df["price_per_night"] = df["price_per_night"].astype(float)
 
     # remove all non numeric values
     df = df[
         pd.to_numeric(df["total_price"], errors="coerce").notna()
     ]
+    df["total_price"] = df["total_price"].astype(float)
+
 
     # remove all non numeric values
     df = df[
@@ -77,5 +84,15 @@ def clean_data(df):
         "FALSE": False
     })
 
+    
+
+
+
+    return df
+
 def save_clean_data(df, file_path):
-    df.to_csv(file_path, index=False)
+    try:
+        df.to_csv(file_path, index=False)
+    except Exception as e:
+        print(f"Error occurred while saving cleaned data to {file_path}: {e}")
+        sys.exit()

@@ -18,16 +18,19 @@ def load_to_bigquery(df, project_id, dataset_id, table_name):
     client.create_dataset(dataset_ref, exists_ok=True)
 
     job_config = bigquery.LoadJobConfig(
-        write_disposition="WRITE_APPEND",  # or WRITE_TRUNCATE
+        write_disposition="WRITE_EMPTY",  # or WRITE_TRUNCATE
     )
 
-    # Upload dataframe to BigQuery
-    job = client.load_table_from_dataframe(
-        df,
-        table_id,
-        job_config=job_config
-    )
+    try:
+        # Upload dataframe to BigQuery
+        job = client.load_table_from_dataframe(
+            df,
+            table_id,
+            job_config=job_config
+        )
+        job.result()
 
-    job.result()
-
-    print(f"Loaded {len(df)} rows into {table_id}")
+        print(f"Loaded {len(df)} rows into {table_id}")
+    except Exception as e:
+        print(f"Error loading data to BigQuery: {e}")    
+        raise

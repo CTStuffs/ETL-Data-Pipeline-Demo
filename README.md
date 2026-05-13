@@ -2,6 +2,8 @@
 
 A Python-based ETL pipeline that extracts data from a raw CSV file, applies cleaning and transformation logic, and loads the result into Google BigQuery.
 
+The data cleaning process acted on extremely strict rules. Any row with missing content was considered invalid.
+
 ## Project Overview
 
 - Extract: read raw CSV data from `data/raw/`.
@@ -15,7 +17,6 @@ A Python-based ETL pipeline that extracts data from a raw CSV file, applies clea
 - `src/transform.py` — data validation, normalization, and type conversion.
 - `src/load.py` — BigQuery upload and dataset management.
 - `data/` — local dataset storage.
-- `notebooks/` — exploratory analysis.
 
 ## Dependencies
 
@@ -61,5 +62,4 @@ python main.py
 ## Recommended Next Steps
 
 - Replace `pandas` with `polars` for faster transformation.
-- Add Parquet export before load.
 - Add CLI flags and schema validation to improve production readiness.
