@@ -1,0 +1,51 @@
+booking_id,guest_name,email,listing_id,listing_city,checkin_date,checkout_date,nights,price_per_night,total_price,payment_status,review_score,is_cancelled
+BKG-013035,,nhoffman@scott.com,1083,Los Angeles,2023-05-24,2023-12-12,-1,245.61,-245.61,pending,6,False
+BKG-003115,CAROLYN SHAH,achan@olson-nelson.com,1079,los angeles,2024-08-19,2024-11-08,81,51.96,4208.76,,6,Yes
+BKG-008732,  Jermaine Huang  ,thomasadam@yahoo.com,1036,San Fran,2024-03-20,2025-03-03,348,383.63,133503.24,paid,1,FALSE
+BKG-007591,amy rios,reginald31@robertson-smith.com,1025,LA,2024-02-29,2025-03-16,381,268.36,102245.16,pending,6,n
+BKG-000221,,,1089,LA,2025-01-26,2025-02-22,27,134.71,3637.17,PENDING,N/A,TRUE
+BKG-017295,,nichole43@gmail.com,1038,LA,2025-02-03,2025-02-16,13,383.22,4981.860000000001,Unpaid,N/A,n
+BKG-005857,,brianbrown@lynn-taylor.com,1066,San Fran,2024-06-25,2024-10-19,116,283.24,32855.840000000004,N/A,4,TRUE
+BKG-012608,Mrs. Amanda Martinez,susanpham@livingston.com,1035,Los Angeles,2025-03-21,2025-03-28,7,189.12,1323.8400000000001,PENDING,,y
+BKG-003463,,eharrison@mullins.com,1038,new york,2023-08-10,2023-11-21,103,392.45,40422.35,Unpaid,-1,TRUE
+BKG-006478,shelby mason,grahamamanda@sparks.com,1089,San Fran,2024-10-19,2025-04-14,177,195.82,34660.14,PENDING,N/A,TRUE
+BKG-003350,hunter weber,erinsmith@smith-kim.net,1081,San Fran,2024-04-30,2024-06-12,43,94.88,4079.8399999999997,paid,N/A,FALSE
+BKG-015982,Elijah Osborne,madisongray@jacobson.org,1021,San Francisco,2025-04-16,2025-05-15,29,464.95,13483.55,Paid,,y
+BKG-019275,  James Lester  ,hannah00@yahoo.com,1044,LA,2023-10-20,2023-10-23,3,466.35,1399.0500000000002,paid,4,No
+BKG-018089,,,1074,SF,2023-08-26,2025-03-08,560,189.67,106215.2,Paid,6,False
+BKG-018753,robert reid,dcastro@hotmail.com,1058,nyc,2023-12-23,2025-02-23,428,268.87,115076.36,paid,2,True
+BKG-011503,,jonesshawn@yahoo.com,1035,NYC,2024-02-04,2024-02-12,8,342.45,2739.6,pending,4,n
+BKG-004058,,michael88@gibson-burch.net,1083,New York,2024-09-07,2024-12-01,85,418.3,35555.5,paid,N/A,y
+BKG-004874,LISA RICHARD,,1006,LA,2023-11-13,2024-01-02,50,286.15,14307.499999999998,Paid,-1,True
+BKG-019936,Jared Jordan,ellenlloyd@perez.biz,1044,San Fran,2024-07-18,2025-04-02,258,466.93,120467.94,PENDING,,y
+BKG-014055,tammie hall,ellisstephanie@gutierrez.net,1092,nyc,2023-08-19,12-02-2023,105,273.47,28714.350000000002,Paid,4,True
+BKG-016852,ERICA SMITH,rodriguezjames@hayes.com,1095,NYC,2023-11-19,2025-03-25,492,278.03,136790.75999999998,N/A,-1,y
+BKG-018250,linda perry,taylorwheeler@yahoo.com,1081,Los Angeles,2023-08-31,2024-01-03,125,67.05,8381.25,Paid,4,y
+BKG-015813,Margaret Mcclain,,1099,LA,2023-11-06,2024-11-05,365,461.04,168279.6,pending,N/A,0
+BKG-016414,John Werner DVM,brayjoseph@gmail.com,1040,San Fran,2024-08-07,2025-04-12,248,329.64,81750.72,paid,6,0
+BKG-019453,robert cunningham,becky06@hotmail.com,1085,los angeles,2024-09-24,2025-01-21,119,457.42,54432.98,Paid,-1,Yes
+BKG-001489,chad moore,douglas18@harmon.com,1067,los angeles,2024-11-08,2024-11-08,0,95.22,0.0,,6,Yes
+BKG-011967,  John Torres  ,nmoss@gmail.com,1090,nyc,2024-02-28,2025-05-01,428,480.46,205636.88,PENDING,5,True
+BKG-009561,michael davis,johnsonsabrina@yahoo.com,1072,San Francisco,2025-03-03,2025-03-03,0,237.31,0.0,N/A,,Yes
+BKG-001398,Bryce Gutierrez,vickiwood@gmail.com,1093,NYC,2024-01-31,2024-09-27,240,419.89,100773.59999999999,,-1,0
+BKG-013829,William Fisher,christopherbrown@yahoo.com,1083,SF,2025-03-08,05-17-2025,70,326.59,22861.3,Paid,6,1
+BKG-012431,  Jennifer Ortiz  ,palmerrebecca@sanford-mckenzie.com,1090,NYC,2024-08-14,2025-04-13,242,149.06,36072.520000000004,PENDING,5,n
+BKG-016160,MEGAN GRANT,sharon41@yahoo.com,1067,los angeles,2024-04-18,2025-04-27,374,87.84,32852.16,paid,6,TRUE
+BKG-008688,,debbieowens@willis.com,1001,SF,2024-03-17,2024-03-17,0,351.59,0.0,N/A,1,FALSE
+BKG-001056,sheila miller,stacy94@robertson.info,1059,NYC,2024-03-24,2024-04-30,37,443.81,16420.97,PENDING,,No
+BKG-014736,Sean Ross,james32@harris.biz,1082,New York,2024-10-23,2024-11-07,15,free,error,pending,,n
+BKG-000945,william howard,rachel86@brown.org,1081,San Fran,2024-01-10,2024-12-31,356,445.75,158687.0,pending,6,1
+BKG-011832,  Jasmine Savage  ,meganpalmer@joseph.com,1075,los angeles,2024-12-21,2025-03-31,100,430.22,43022.0,,6,True
+BKG-002826,DUSTIN POTTER,robert94@sloan-mcguire.com,1088,SF,2024-06-14,2024-12-02,171,99.66,17041.86,N/A,-1,False
+BKG-005843,ANA MOORE,susanmcgee@yahoo.com,1024,nyc,2025-04-08,2025-05-20,42,470.22,19749.24,paid,-1,True
+BKG-000383,cassandra hansen,vanessa95@hotmail.com,1052,New York,2024-02-25,2024-06-11,107,191.98,20541.86,Unpaid,N/A,0
+BKG-006252,  David Frederick  ,hperry@yahoo.com,1009,nyc,2024-01-12,2025-02-27,412,445.14,183397.68,pending,6,False
+BKG-019866,  Travis Hogan  ,heidimiller@gmail.com,1054,New York,2024-05-25,2024-12-22,211,468.93,98944.23,pending,N/A,y
+BKG-003328,  Mario Smith  ,terrybrooke@ross.com,1050,NYC,2024-07-03,2025-03-30,270,190.41,51410.7,N/A,,1
+BKG-015931,JOHN BARBER,ymoore@gmail.com,1075,SF,2024-06-18,2024-12-02,167,414.93,69293.31,Unpaid,N/A,False
+BKG-008535,  Thomas Hill  ,qchurch@miller-henry.com,1008,San Francisco,2024-01-22,2024-12-03,316,172.79,54601.64,N/A,N/A,y
+BKG-003062,Natalie York,,1008,San Fran,2024-03-29,11-30-2024,246,79.0,19434.0,N/A,,FALSE
+BKG-007772,Stephanie Taylor,huntermichelle@chen-barrett.com,1076,new york,2025-03-10,2025-03-21,11,310.94,3420.34,pending,6,True
+BKG-005638,STANLEY RICE,youngjessica@hotmail.com,1028,new york,2023-10-04,2023-10-12,8,276.55,2212.4,,6,y
+BKG-002533,Leroy Walker,shane42@gmail.com,1036,NYC,2024-07-11,2025-02-05,209,328.47,68650.23000000001,paid,,False
+BKG-004344,david oneal phd,melvin17@nguyen-smith.biz,1018,NYC,31/01/2025,2025-02-19,19,128.37,2439.03,PENDING,-1,FALSE
