@@ -1,12 +1,10 @@
 from google.cloud import bigquery
 import pandas as pd
+from google.auth.exceptions import DefaultCredentialsError
 
 def load_to_bigquery(df, project_id, dataset_id, table_name):
-    # project_id = "project-f29ff3f0-617a-46c7-94f"
-
-    # dataset_id = "test_data"
-
-    # table_name = "tablename"
+    if df.empty:
+        raise ValueError("DataFrame is empty. No data to load to BigQuery.")
 
     table_id = f"{project_id}.{dataset_id}.{table_name}"
     client= bigquery.Client(project=project_id)
@@ -31,6 +29,8 @@ def load_to_bigquery(df, project_id, dataset_id, table_name):
         job.result()
 
         print(f"Loaded {len(df)} rows into {table_id}")
+        return table_id
+    except DefaultCredentialsError as e:
+         raise RuntimeError("BigQuery authentication failed")
     except Exception as e:
-        print(f"Error loading data to BigQuery: {e}")    
-        raise
+        raise Exception(f"Error loading data to BigQuery: {e}") from e   

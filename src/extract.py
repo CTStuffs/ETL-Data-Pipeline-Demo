@@ -17,12 +17,9 @@ def extract_csv(file_path):
     try:
         df = pd.read_csv(file_path)
     except ValueError:
-        # print(f"Error: Invalid CSV format in file {file_path}. The file may be empty or is incorrectly formatted.")
-        # sys.exit("Exiting due to invalid CSV format or empty file...")
         raise ValueError(f"Invalid CSV format in file {file_path}")
     except Exception as e:
-        # print(f"Error occurred while extracting data from {file_path}: {e}")
-        # sys.exit("Exiting due to extraction error...")
+
         raise Exception(f"Error occurred while extracting data from {file_path}: {e}")
     
     return df
