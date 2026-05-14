@@ -1,14 +1,15 @@
 # ETL Data Pipeline Demo
 
-A Python-based ETL pipeline that extracts data from a raw CSV file, applies cleaning and transformation logic, and loads the result into Google BigQuery.
+A Python-based ETL pipeline that extracts data from a raw CSV file, applies cleaning and transformation logic, and loads the result into Google BigQuery. The dataset used was a modified version of the dataset sourced from [here](https://www.kaggle.com/code/alyashoush/data-cleaning).
 
-The data cleaning process acted on extremely strict rules. Any row with missing content was considered invalid.
+The data cleaning process acted on extremely strict rules. Any row with missing content was considered invalid. 
 
 ## Project Overview
 
 - Extract: read raw CSV data from `data/raw/`.
 - Transform: clean, normalize, and validate rows in `src/transform.py`.
 - Load: append transformed results into a BigQuery table using `src/load.py`.
+- Test: unit tests for above three tasks in `test/`
 
 ## Architecture
 
@@ -17,6 +18,7 @@ The data cleaning process acted on extremely strict rules. Any row with missing 
 - `src/transform.py` — data validation, normalization, and type conversion.
 - `src/load.py` — BigQuery upload and dataset management.
 - `data/` — local dataset storage.
+- `test/` - unit tests
 
 ## Dependencies
 
@@ -25,13 +27,14 @@ The data cleaning process acted on extremely strict rules. Any row with missing 
 - python-dotenv
 - google-cloud-bigquery
 - word2number
+- pytest
 
 ## Quick Start
 
 1. Install dependencies:
 
 ```bash
-pip install pandas python-dotenv google-cloud-bigquery word2number
+pip install pandas python-dotenv google-cloud-bigquery word2number pytest
 ```
 
 2. Configure environment variables in `.env`:
@@ -45,8 +48,15 @@ DATA_PATH=data/raw/<your-file>.csv
 
 3. Run the pipeline:
 
+Ensure that your BigQuery credentials can be authorized. Then run:
+
 ```bash
 python main.py
+```
+
+## Testing
+```
+pytest test/
 ```
 
 ## Notes
@@ -57,9 +67,10 @@ python main.py
 ## Output
 
 - Cleaned dataset loaded into `project.dataset.table` in Google BigQuery.
-- Duplicate rows are removed, missing data is dropped, and numeric fields are normalized.
+- Duplicate rows are removed, rows with missing data are dropped, and numeric fields are normalized.
 
-## Recommended Next Steps
+## Potential Next Steps
 
 - Replace `pandas` with `polars` for faster transformation.
-- Add CLI flags and schema validation to improve production readiness.
+- CLI flags for improved production readiness.
+- Integration testing for the entire pipeline

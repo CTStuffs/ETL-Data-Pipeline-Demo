@@ -3,6 +3,17 @@ import sys
 import pandas as pd
 from word2number import w2n
 
+city_mapping = {
+    "los angeles": "Los Angeles",
+    "la": "Los Angeles",
+
+    "san francisco": "San Francisco",
+    "san fran": "San Francisco",
+    "sf": "San Francisco",
+
+    "new york": "New York",
+    "nyc": "New York"
+}
 
 def convert_cancelled(x):
     if x == "YES" or x == "Y":
@@ -29,8 +40,18 @@ def clean_data(df):
     # remove rows with blanks
     df = df.dropna()
 
+    # remove leading and trailing whitespace and standardize case for guest names
+    df["guest_name"] = df["guest_name"].astype("string").str.strip().str.title()
+
+
     # convert listingid to ints
     df["listing_id"] = df["listing_id"].astype(int)
+
+    # remove leading and trailing whitespace and standardize case for city names
+    df["listing_city"] = df["listing_city"].astype("string").str.strip().str.lower()
+    
+    # then map city names to standardised names
+    df["listing_city"] = df["listing_city"].replace(city_mapping)
 
     timeformat = "%Y-%m-%d"
 

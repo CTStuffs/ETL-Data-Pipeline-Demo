@@ -41,7 +41,7 @@ def test_clean_data_remove_nulls(load_sample_data):
     """Test removal of rows with null values"""
 
     df = load_sample_data.copy()
-    assert not df.isnull().values.any()
+    assert df.notnull().all().all()
 
 
 def test_clean_data_listing_id_conversion(load_sample_data):
